@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AnuncioApp</title>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+	
+	<h1>Cadastro de Anuncios:</h1>
+	<h3><a href="/anuncios" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Anuncio</a></h3>
+	
+	<form class="container" method="post">
+		<div class="row">
+			Nome do Anuncio: <input type="text" value="" name="nome"/>
+			Nome do Cliente: <input type="text" value="" name="cliente"/>
+			<div class="input-field col s3">
+				Data de Inicio: <input type="date" value="" name="dataInicio"/>
+			</div>
+			<div class="input-field col s3">
+				Data de Termino: <input type="date" value="" name="dataTermino"/>
+			</div>
+			<div class="input-field col s3">
+				Valor do Investimento: <input type="text" value="" name="investimento">
+			</div>
+		</div>
+		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+	</form>
+	
+</body>
+</html>

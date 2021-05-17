@@ -1,0 +1,43 @@
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>AnunciosApp</title>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+</head>
+<body>
+
+	<h1> Lista de Anuncios</h1>
+	<h3><a href="/cadastrarAnuncio" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Anuncio</a></h3>
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome do anuncio</th>
+				<th>Nome do Cliente</th>
+				<th>Data de Inicio</th>
+				<th>Data de Termino</th>
+				<th>Investimento</th>
+				<th>Relatório</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr th:each="anuncio : ${anuncios}">
+				<td><span th:text=${anuncio.nome}></span></td>
+				<td><span th:text=${anuncio.cliente}></span></td>
+				<td><span th:text=${anuncio.dataInicio}></span></td>
+				<td><span th:text=${anuncio.dataTermino}></span></td>
+				<td><span th:text=${anuncio.investimento}></span></td>
+				<td> <a href="/relatorio" class="waves-effect waves-light btn">Relatorio</a> </td>
+				</tr>
+		</tbody>
+	</table>
+	
+	<!--JavaScript at end of body for optimized loading-->
+    <script type="materialize/text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
